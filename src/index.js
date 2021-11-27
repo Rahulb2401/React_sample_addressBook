@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './Common/common.css';
+import PhoneDirectory from './Phone-directory';
+import { Provider } from "react-redux";
+import store from "./subscriberStore";
 
 ReactDOM.render(
+
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <PhoneDirectory />
+    </Provider>,
   </React.StrictMode>,
   document.getElementById('root')
 );
